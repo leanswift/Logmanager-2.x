@@ -103,7 +103,7 @@ class Logger
 							try
 							{
 								$zip = new ZipArchive();
-								$fileName = $configuration['log_file'].date("d-m-Y").'.zip';
+								$fileName = $configuration['log_file'].date("d-m-YH:i:s").'.zip';
 								$fileName = str_replace(" ","",$fileName);
 								if ($zip->open($fileName, ZIPARCHIVE::CREATE) === false) 
 								{
