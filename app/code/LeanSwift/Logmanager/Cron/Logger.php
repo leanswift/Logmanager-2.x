@@ -62,7 +62,7 @@ class Logger
                 while (false !== ($logFile = readdir($dir))) 
                 {
 					chdir($filePath);
-                    if(strpos($logFile, 'log') != false && (strpos($logFile, 'zip') != true))
+                    if(strpos($logFile, 'log') != false)
                     {
                         if(strtoupper(strpos($os, 'win')) != false)
                             $fileTime = filectime($logFile);
